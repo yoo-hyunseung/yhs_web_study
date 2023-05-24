@@ -173,6 +173,8 @@ public class DataCollection {
 	public static void main(String[] args) {
 		DataCollection dc = new DataCollection();
 //		dc.FoodCategoryData();
+		System.out.println("hello");
 		dc.foodDetailData(); // 30 * 10 
+		
 	}
 }

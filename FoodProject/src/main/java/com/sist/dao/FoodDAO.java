@@ -68,7 +68,7 @@ public class FoodDAO {
 	// 데이터베이스(오라클) 연결
 	public void getConnection() {
 		try {
-			conn = DriverManager.getConnection(url,"hr","happy");
+			conn = DriverManager.getConnection(url,"hr","1235");
 			// -> 오라클 전송 : conn hr/happy
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -171,12 +171,13 @@ public class FoodDAO {
 			ps.setString(6, vo.getType());
 			ps.setString(7, vo.getPrice());
 			ps.setString(8, vo.getParking());
-			ps.setString(9, vo.getMenu());
-			ps.setInt(10, vo.getGood());
-			ps.setInt(11, vo.getSoso());
-			ps.setInt(12, vo.getBad());
-			ps.setString(13, vo.getPoster());
-			ps.setString(14, vo.getTime());
+			ps.setString(9, vo.getTime());
+			ps.setString(10, vo.getMenu());
+			ps.setInt(11, vo.getGood());
+			ps.setInt(12, vo.getSoso());
+			ps.setInt(13, vo.getBad());
+			ps.setString(14, vo.getPoster());
+			
 			
 			ps.executeUpdate();
 		} catch (Exception e) {
