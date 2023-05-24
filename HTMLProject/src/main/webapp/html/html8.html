@@ -1,0 +1,157 @@
+<!--
+	 79page 목록출력 
+	 1. ul : 순서가 없는 출력 => 메뉴, 카드
+	     	ul : unorder list
+	     	 |
+	     	 li => 목록출력
+	     	 <ul>
+	     	 	<li></li>
+	     	 	<li></li>
+	     	 	<li></li>
+	     	 	....
+	     	 </ul>
+	 2. ol : 순서가 있는 출력 (사용빈도는거의 없다) => 문제 출력
+	 		ol :order list
+	 		|
+	 		li -> 목록출력
+	 		<ol>
+	 			<li></li>
+	 			<li></li>
+	 			<li></li>
+	 			...
+	 		</ol>
+	 3. dl : 상세보기
+	 		<dl> : data list
+	 		|
+	 		<dt> => 제목 
+	 		|
+	 		<dd> => 내용
+	 		<dl>
+	 			<dt></dt>
+	 			<dd></dd>
+	 			<dt></dt>
+	 			<dd></dd>
+	 			<dt></dt>
+	 			<dd></dd>
+	 		</dl>
+	 4. table : 목록출력
+	 	<table>
+	 	  |
+	 	  <tr> : 라인
+	 	  |
+	 	  ---------
+	 	  |       |
+	 	  <th>    <td>
+	 	  제목      실제출력
+	 	  
+	 	  <table>
+	 	  	<tr>
+	 	  		<th></th>
+	 	  		<th></th>
+	 	  		<th></th>
+	 	  		
+	 	  	</tr>
+	 	  	<tr>
+	 	  		<td></td>
+	 	  		<td></td>
+	 	  		<td></td>
+	 	  	</tr>
+	 	  </table>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>ul 태그</h1>
+	<ul>
+		<li>java</li>
+		<li>oracle</li>
+		<li>html/css</li>
+		<li>javascript</li>
+		<li>jsp</li>
+		<li>spring</li>
+		<li>aws</li>	
+	</ul>
+	<h1>ol tag</h1>
+	<ol>
+		<li>java</li>
+		<li>oracle</li>
+		<li>html/css</li>
+		<li>javascript</li>
+		<li>jsp</li>
+		<li>spring</li>
+		<li>aws</li>	
+	</ol>
+	<h1>dl tag</h1>
+	<dl>
+		<dt>java</dt>
+		<dd>브라우저와 오라클을 연동</dd>
+		<dt>오라클</dt>
+		<dd>공통으로 사용하는 데이터를 저장</dd>
+		<dt>html/css</dt>
+		<dd>정적언어 => 브라우저의 출력담당</dd>
+		<dt>javascript</dt>
+		<dd>브라우저에서 사용자의 요청 처리(동적)</dd>
+		<dt>jsp</dt>
+		<dd>서버에서 사용요청에 따라 처리 결과를 출력하는 파일(html변경)</dd>
+		<dt>Spring</dt>
+		<dd>통합 개발 라이브러리</dd>
+		<dt>AWS</dt>
+		<dd>서버컴퓨터가 필요하다 (아마존에서 서버컴퓨터를 임대해서 사용)</dd>
+	</dl>
+	<h1>table tag</h1>
+	<table width=500 border=1 bordercolor="red">
+		<tr>
+			<th>이름</th>
+			<th>국어</th>
+			<th>영어</th>
+			<th>수학</th>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>22</td>
+			<td>123</td>
+			<td>2312</td>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>22</td>
+			<td>123</td>
+			<td>2312</td>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>22</td>
+			<td>123</td>
+			<td>2312</td>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>22</td>
+			<td>123</td>
+			<td>2312</td>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>22</td>
+			<td>123</td>
+			<td>2312</td>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>22</td>
+			<td>123</td>
+			<td>2312</td>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>22</td>
+			<td>123</td>
+			<td>2312</td>
+		</tr>
+	</table>
+</body>
+</html>
