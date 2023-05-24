@@ -172,9 +172,9 @@ public class DataCollection {
 	}
 	public static void main(String[] args) {
 		DataCollection dc = new DataCollection();
+//		dc.FoodCategoryData(); 카테고리 먼저 하고 !
+		dc.foodDetailData(); // 30 * 10  상세데이터 오라클 추가
 //		dc.FoodCategoryData();
-		System.out.println("hello");
-		dc.foodDetailData(); // 30 * 10 
 		
 	}
 }
