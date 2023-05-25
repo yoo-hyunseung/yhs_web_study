@@ -2,6 +2,7 @@ package com.sist.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,16 +33,19 @@ public class BoardListServlet extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		// 사용자가 요청한 페이지를 받는다. => request
 		String strPage = request.getParameter("page");
-//		if(strPage==null) {
-//			strPage="1";
-//		}
+		if(strPage==null) {
+			strPage="1";
+		}
 		int curpage = Integer.parseInt(strPage);
 		// 사용자의 브라우저에서 읽어가는 위치를 설정 => OutputStream 
 		BoardDAO dao=BoardDAO.newInstance();
 		List<BoardVO> list=dao.boardListData(1);
+		// 총페이지 받기
+		int totalpage = dao.boardTotalPage();
+	
 		out.println("<html>");
 		out.println("<head>");
-		out.println("<link rel=stylesheet href=table.css>");
+		out.println("<link rel=stylesheet href=html/table.css>");
 		out.println("</head>");
 		out.println("<body>");
 //		out.println("</body>");
@@ -61,11 +65,19 @@ public class BoardListServlet extends HttpServlet {
 		out.println("<th width=20%>작성일</th>");
 		out.println("<th width=10%>조회수</th>");
 		out.println("</tr>");
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String today = sdf.format(date); // 오늘 날짜
 		for(BoardVO vo:list)
 		{
 			out.println("<tr class=dataTr>");
 			out.println("<td width=10% align=center>"+vo.getNo()+"</td>");
-			out.println("<td width=45%>"+vo.getSubject()+"</td>");
+			out.println("<td width=45%>"+vo.getSubject());
+			if(today.equals(vo.getDbday())) {
+				out.println("&nbsp;<sup style=\"color=red\">new<sup>");
+			}
+			out.println("");
+			out.println("</td>");
 			out.println("<td width=15% align=center>"+vo.getName()+"</td>");
 			out.println("<td width=20% align=center>"+vo.getDbday()+"</td>");
 			out.println("<td width=10% align=center>"+vo.getHit()+"</td>");
@@ -73,9 +85,9 @@ public class BoardListServlet extends HttpServlet {
 		}
 		out.println("<tr>");
 		out.println("<td colspan=5 align=center>");
-		out.println("<a href=#>이전</a>");
-		out.println("0 page / 0pages");
-		out.println("<a href=#>다음</a>");
+		out.println("<a href=BoardListServlet?page="+(curpage>1?curpage-1:curpage)+">이전</a>");
+		out.println(curpage+" page / "+totalpage+" pages");
+		out.println("<a href=BoardListServlet?page="+(curpage<totalpage?curpage+1:curpage)+">다음</a>");
 		out.println("</td>");
 		out.println("</tr>");
 		out.println("</table>");
