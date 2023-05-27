@@ -3,8 +3,8 @@
     pageEncoding="UTF-8" import="java.util.*,com.sist.dao.*"%>
 
 <%
-    // 자바가 들어가는 위치 
-    FoodDAO dao=FoodDAO.newInstance();
+// 자바가 들어가는 위치 
+    FoodDAO1 dao=FoodDAO1.newInstance();
     List<CategoryVO> list=dao.foodCategoryData();
 %>
 <!DOCTYPE html>

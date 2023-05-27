@@ -11,7 +11,7 @@ import com.sist.dao.*;
 public class DataCollection {
 	public void FoodCategoryData() {
 		// 오라클에 추가
-		FoodDAO dao = FoodDAO.newInstance();//싱글톤패턴
+		FoodDAO1 dao = FoodDAO1.newInstance();//싱글톤패턴
 		try {
 			Document doc = Jsoup.connect("https://www.mangoplate.com/").get();
 			Elements title = doc.select("div.info_inner_wrap span.title"); //30개
@@ -55,7 +55,7 @@ public class DataCollection {
 		
 	}
 	public void foodDetailData() {
-		FoodDAO dao = FoodDAO.newInstance();
+		FoodDAO1 dao = FoodDAO1.newInstance();
 		try {
 			List<CategoryVO> list = dao.foodCategoryData();
 			for(CategoryVO vo : list) {

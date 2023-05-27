@@ -44,7 +44,7 @@ import com.sist.vo.*;
  *          
  *          -------------------------------오라클 연결(Servlet -> JSP)
  */
-public class FoodDAO {
+public class FoodDAO1 {
 	// 기능 insert -> 데이터 수집 (파일)
 	//
 	private Connection conn; //오라클 연결하는 객체 (데이터베이스 연결)
@@ -52,13 +52,13 @@ public class FoodDAO {
 	private final String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	// MySql => jdbc:mysql://localhost/mydb
 	
-	private static FoodDAO dao; // 싱글턴 패턴
+	private static FoodDAO1 dao; // 싱글턴 패턴
 	// DAO객체를 한개만 사용이 가능하게 만든다.
 	
 	// 드라이버 설치 -> 소프트웨어(메모리할당요청) Class.forName()
 	// 클래스의 정보를 전송
 	// 드라이버 설치는 한번만 수행
-	public FoodDAO() {
+	public FoodDAO1() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		} catch (Exception e) {
@@ -86,11 +86,11 @@ public class FoodDAO {
 	}
 	// DAO객체를 1개만 생성해서 사용 => 메모리 누수현상을 방지(싱글톤 패턴)
 	// 싱글톤 / 팩토리 -> 면접(스프링 : 패턴 8개)
-	public static FoodDAO newInstance() {
+	public static FoodDAO1 newInstance() {
 		// newInstance() , getInstance() -> 싱글톤 패턴
 //		Calendar cal = Calendar.getInstance(); -- 싱글톤 패턴
 		if(dao==null) {
-			dao=new FoodDAO();
+			dao=new FoodDAO1();
 		}
 		return dao;
 	}
