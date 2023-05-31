@@ -206,7 +206,7 @@ public class FoodDAO {
 					+ "from (select fno,name,poster,score,rownum as num "
 					+ "from (select fno,name,poster,score "
 					+ "from food_location "
-					+ "where address like '%'||?||'%'\")) "
+					+ "where address like '%'||?||'%')) "
 					+ "where num between ? and ?";
 			ps = conn.prepareStatement(sql);
 			int rowSize = 12;
@@ -223,7 +223,7 @@ public class FoodDAO {
 				vo.setName(rs.getString(2));
 				String poster = rs.getString(3);
 				poster = poster.substring(0,poster.indexOf("^"));
-				poster = poster.replaceAll("#", "& ");
+				poster = poster.replaceAll("#", "&");
 				vo.setPoster(poster);
 				vo.setScore(rs.getDouble(4));
 				list.add(vo);
