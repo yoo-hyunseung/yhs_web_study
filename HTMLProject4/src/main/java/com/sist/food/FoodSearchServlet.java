@@ -37,7 +37,7 @@ public class FoodSearchServlet extends HttpServlet {
 		FoodDAO dao = FoodDAO.newInstance();
 		List<FoodVO> list = dao.foodFindData(addr, curpage);
 		int totalpage=(int)(Math.ceil(dao.foodRowCount(addr)/12.0));
-		int count = dao.foodRowCount(addr);
+//		int count = dao.foodRowCount(addr);
 		final int BLOCK = 5;
 		// curpage 1 = > startpage =1
 		int startPage = ((curpage-1)/BLOCK*BLOCK)+1;
@@ -105,11 +105,17 @@ public class FoodSearchServlet extends HttpServlet {
 		out.println("<div class=row>");
 		out.println("<div class=container>");
 		out.println("<ul class=pagination>");
-		out.println("<li><a href=#>&lt;</a></li>");
-		for(int i =startPage ; i <= endPage;i++) {
-			out.println("<li "+(curpage==i?"class=active":"")+"><a href=FoodSearchServlet?page="+i+">"+i+"</a></li>");
+		if(startPage>1)
+		{
+		  out.println("<li><a href=FoodSearchServlet?page="+(startPage-1)+"&addr="+addr+">&lt;</a></li>");
 		}
-		out.println("<li><a href=#>&gt;</a></li>");
+		for(int i =startPage ; i <= endPage;i++) {
+			out.println("<li "+(curpage==i?"class=active":"")+"><a href=FoodSearchServlet?page="+i+"&addr="+addr+">"+i+"</a></li>");
+		}
+		if(endPage<totalpage)
+		{
+		  out.println("<li><a href=FoodSearchServlet?page="+(endPage+1)+"&addr="+addr+">&gt;</a></li>");
+		}
 		out.println("</ul>");
 		out.println("</div>");
 		out.println("</div>");
