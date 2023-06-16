@@ -3,7 +3,7 @@ package com.sist.dao;
 import java.util.*;
 import java.sql.*;
 public class SeoulDAO {
-private Connection conn;
+	private Connection conn;
 	
 	// 송수신
 	private PreparedStatement ps;
