@@ -66,7 +66,7 @@ h1{
 </head>
 <body>
 	<div class="container">
-		<h1>자료시</h1>
+		<h1>자료실</h1>
 		<div class="row">
 			<table class="table">
 				<tr>
