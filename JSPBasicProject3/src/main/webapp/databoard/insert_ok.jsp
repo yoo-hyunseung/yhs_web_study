@@ -26,12 +26,13 @@
 	vo.setContent(content);
 	vo.setPwd(pwd);
 	
-	String filename=mr.getOriginalFileName("upload");
-	if(filename==null){
+	//String filename=mr.getOriginalFileName("upload");
+	String filename=mr.getFilesystemName("upload");
+	if(filename==null){ // 업로드가 안된상태
 		vo.setFilename("");
 		vo.setFilesize(0);
 	}
-	else{
+	else{ // 업로드가 된상태
 		File file = new File(path+"/"+filename);
 		vo.setFilename(filename);
 		vo.setFilesize((int)file.length());
