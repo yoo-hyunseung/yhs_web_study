@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sawon SYSTEM "sawon.dtd">
+<sawon>
+<list>
+	<name>홍길동</name>
+	<sex>남자</sex>
+	<tel>010999999</tel>
+</list>
+</sawon>

@@ -4,7 +4,7 @@
 
 <%
 // 자바가 들어가는 위치 
-    FoodDAO1 dao=FoodDAO1.newInstance();
+    FoodDAO dao=FoodDAO.newInstance();
     List<CategoryVO> list=dao.foodCategoryData();
 %>
 <!DOCTYPE html>
