@@ -44,6 +44,7 @@ import java.lang.annotation.Target;
  *  }
  */
 public @interface RequestMapping {
+	// 어노테이션 선언  어노테이션 이름
 	// @RequestMapping("") 안에 구분자를 String으로 쓴다는 뜻..
 	public String value();
 }

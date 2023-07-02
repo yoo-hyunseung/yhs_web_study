@@ -65,6 +65,7 @@ public class DispatcherServlet extends HttpServlet {
 	
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
+		// 서블릿 초기화 : 생성자?
 		try {
 			URL url = this.getClass().getClassLoader().getResource(".");
 			File file = new File(url.toURI());
@@ -129,6 +130,7 @@ public class DispatcherServlet extends HttpServlet {
 		path = path.substring(request.getContextPath().length()+1);
 //		http://localhost
 //		/JSPMVCFinalProject/   food/category.do -> path
+		
 //		-------------------- contextPath()
 //		food/category.do -> path
 //		경로명 안에 파일을 가져온다.
@@ -145,7 +147,11 @@ public class DispatcherServlet extends HttpServlet {
 				for(Method m : methods) {
 					RequestMapping rm = m.getAnnotation(RequestMapping.class);
 					if(rm.value().equals(path)) {
+						// rm.value() -> @RequestMapping("내용")-> jsp.main.do
+						// path = >jsp/main.do
 						String jsp = (String)m.invoke(obj, request,response);
+						// jsp => ../jsp/main.jsp
+						// main_page return형 
 						if(jsp==null) { // void(ajax)
 							return;
 						}
@@ -155,7 +161,7 @@ public class DispatcherServlet extends HttpServlet {
 							
 							
 						} else {
-							// Re
+							// ../jsp/main.jsp
 							RequestDispatcher rd = request.getRequestDispatcher(jsp);
 							rd.forward(request, response);
 						}

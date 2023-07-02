@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="main" class="com.sist.model.MainModel"></bean>
+	<bean id="list" class="com.sist.model.ListModel"></bean>
+	<bean id="share" class="com.sist.model.ShareModel"></bean>
+</beans>
