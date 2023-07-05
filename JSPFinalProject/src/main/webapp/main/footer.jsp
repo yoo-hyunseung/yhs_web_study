@@ -10,7 +10,7 @@
 <div class="wrapper row4">
   <footer id="footer" class="clear"> 
     <!-- ################################################################################################ -->
-    <div class="one_quarter first">
+    <div class="one_third first">
       <h6 class="title">Company Details</h6>
       <address class="btmspace-15">
       Company Name<br>
@@ -23,17 +23,7 @@
         <li><span class="fa fa-envelope-o"></span> info@domain.com</li>
       </ul>
     </div>
-    <div class="one_quarter">
-      <h6 class="title">Quick Links</h6>
-      <ul class="nospace linklist">
-        <li><a href="#">Home Page</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
-    <div class="one_quarter">
+    <div class="one_third">
       <h6 class="title">From The Blog</h6>
       <article>
         <h2 class="nospace"><a href="#">Lorem ipsum dolor</a></h2>
@@ -41,8 +31,8 @@
         <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed.</p>
       </article>
     </div>
-    <div class="one_quarter">
-      <h6 class="title">Keep In Touch</h6>
+    <div class="one_third">
+      <h6 class="title">오늘뉴스</h6>
       <form class="btmspace-30" method="post" action="#">
         <fieldset>
           <legend>Newsletter:</legend>
@@ -68,7 +58,7 @@
 <div class="wrapper row5">
   <div id="copyright" class="clear"> 
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_left">Copyright &copy; 2023 - 강북쌍용교육센터 - <a href="#">Domain Name</a></p>
     <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
     <!-- ################################################################################################ --> 
   </div>

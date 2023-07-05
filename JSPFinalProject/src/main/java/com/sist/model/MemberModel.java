@@ -32,6 +32,7 @@ public class MemberModel {
 		String id=request.getParameter("id");
 		MemberDAO dao=MemberDAO.newInstance();
 		int count=dao.memberIdCheck(id);
+		System.out.println(count);
 		// 데이터를 Ajax로 전송 ==> success:function(result)
 		try
 		{

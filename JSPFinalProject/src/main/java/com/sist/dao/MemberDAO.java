@@ -158,7 +158,8 @@ public class MemberDAO {
    }
    // 5. 회원가입 
    /*
-    *    ID           NOT NULL VARCHAR2(20)
+    *   
+         ID           NOT NULL VARCHAR2(20)
 		 PWD          NOT NULL VARCHAR2(10)
 		 NAME         NOT NULL VARCHAR2(51)
 		 SEX          VARCHAR2(10)

@@ -57,7 +57,7 @@
         <c:if test="${s.index>=0 && s.index<12 }">
          <li>
           <figure><img class="radius-10 btmspace-10" src="${vo.poster }" alt="">
-            <figcaption><a href="#">${vo.title }</a></figcaption>
+            <figcaption><a href="../food/food_category_list.do?cno=${vo.cno }">${vo.title }</a></figcaption>
           </figure>
          </li>
         </c:if>
@@ -73,7 +73,7 @@
         <c:if test="${s.index>=12 && s.index<18 }">
          <li>
           <figure><img class="radius-10 btmspace-10" src="${vo.poster }" alt="">
-            <figcaption><a href="#">${vo.title }</a></figcaption>
+            <figcaption><a href="../food/food_category_list.do?cno=${vo.cno }">${vo.title }</a></figcaption>
           </figure>
          </li>
         </c:if>
@@ -89,7 +89,7 @@
         <c:if test="${s.index>=18 && s.index<30 }">
          <li>
           <figure><img class="radius-10 btmspace-10" src="${vo.poster }" alt="">
-            <figcaption><a href="#">${vo.title }</a></figcaption>
+            <figcaption><a href="../food/food_category_list.do?cno=${vo.cno }">${vo.title }</a></figcaption>
           </figure>
          </li>
         </c:if>
