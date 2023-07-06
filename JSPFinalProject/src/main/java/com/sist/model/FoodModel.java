@@ -1,6 +1,7 @@
 package com.sist.model;
 
 import javax.servlet.http.Cookie;
+import com.sist.common.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.sist.controller.RequestMapping;
@@ -46,6 +47,7 @@ public class FoodModel {
 	  request.setAttribute("list", list);
 	  request.setAttribute("fd", fd);
 	  request.setAttribute("main_jsp", "../food/location_find.jsp");
+	  CommonModel.commonRequestData(request);
 	  return "../main/main.jsp";
   }
   /*
@@ -76,7 +78,7 @@ public class FoodModel {
 	  
 	  
 	  request.setAttribute("main_jsp", "../food/food_category_list.jsp");
-	  
+	  CommonModel.commonRequestData(request);
 	  return "../main/main.jsp";
   }
   
@@ -94,7 +96,7 @@ public class FoodModel {
 	  
 //	  전송
 	  response.addCookie(cookie);
-	  return "redirect:../food/food_detail.do?fno"+fno;
+	  return "redirect:../food/food_detail.do?fno="+fno;
   }
 /*
   회원가입 / 로그인 -> main.do
@@ -118,7 +120,7 @@ public class FoodModel {
 	  //인근 명소, 레시피
 	  
 	  request.setAttribute("main_jsp", "../food/food_detail.jsp");
-	  
+	  CommonModel.commonRequestData(request);
 	  return "../main/main.jsp";
   }
   

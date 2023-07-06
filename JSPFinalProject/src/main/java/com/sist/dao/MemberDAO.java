@@ -22,6 +22,9 @@ public class MemberDAO {
    public int memberIdCheck(String id)
    {
 	   int count=0;
+	   if(id.equals("")) {
+		   return 0;
+	   }
 	   try
 	   {
 		   conn=db.getConnection();
@@ -48,6 +51,9 @@ public class MemberDAO {
    public int memberEmailCheck(String email)
    {
 	   int count=0;
+	   if(email.equals("")) {
+		   return 0;
+	   }
 	   try
 	   {
 		   conn=db.getConnection();
@@ -73,6 +79,9 @@ public class MemberDAO {
    // 3. 우편번호 검색 
    public int postFindCount(String dong)
    {
+	   if(dong.equals("")) {
+		   return 0;
+	   }
 	   int count=0;
 	   try
 	   {

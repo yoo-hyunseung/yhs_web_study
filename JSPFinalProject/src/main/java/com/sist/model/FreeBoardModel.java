@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.sist.dao.*;
 import com.sist.vo.*;
 import com.sist.controller.RequestMapping;
-
+import com.sist.common.*;
 public class FreeBoardModel {
 	
 	@RequestMapping("board/list.do")
@@ -35,6 +35,7 @@ public class FreeBoardModel {
 		// board/list.jsp
 		
 		request.setAttribute("main_jsp","../board/list.jsp" );
+		CommonModel.commonRequestData(request);
 		return "../main/main.jsp";
 	}
 	
@@ -43,6 +44,7 @@ public class FreeBoardModel {
 		
 		
 		request.setAttribute("main_jsp", "../board/insert.jsp");
+		CommonModel.commonRequestData(request);
 		return "../main/main.jsp";
 	}
 	
@@ -74,6 +76,7 @@ public class FreeBoardModel {
 		
 		request.setAttribute("vo", vo);
 		request.setAttribute("main_jsp", "../board/detail.jsp");
+		CommonModel.commonRequestData(request);
 		return "../main/main.jsp";
 	}
 	@RequestMapping("board/delete.do")
@@ -102,6 +105,7 @@ public class FreeBoardModel {
 		
 		request.setAttribute("vo", vo);
 		request.setAttribute("main_jsp", "../board/update.jsp");
+		CommonModel.commonRequestData(request);
 		return "../main/main.jsp";
 	}
 	
@@ -124,6 +128,7 @@ public class FreeBoardModel {
 		
 		request.setAttribute("bCheck", bCheck);
 		request.setAttribute("no", vo.getNo());
+		
 		return "../board/update_ok.jsp";
 	}
 	

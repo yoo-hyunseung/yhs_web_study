@@ -137,15 +137,15 @@ $(function(){
       </li>
       <li><a class="drop" href="#">서울여행</a>
         <ul>
-          <li><a href="pages/gallery.html">명소</a></li>
-          <li><a href="pages/full-width.html">자연 & 관광</a></li>
-          <li><a href="pages/sidebar-left.html">쇼핑</a></li>
+          <li><a href="../seoul/seoul_list.do">명소</a></li>
+          <li><a href="../seoul/seoul_list.do?no=2">자연 & 관광</a></li>
+          <li><a href="../seoul/seoul_list.do?no=3">쇼핑</a></li>
          <c:if test="${sessionScope.id!=null }">
           <li><a href="pages/sidebar-left.html">코스</a></li>
          </c:if>
         </ul>
       </li>
-      <li><a href="#">레시피 스토어</a></li>
+      <li><a href="../goods/goods_list.do">레시피 스토어</a></li>
       <li><a class="drop" href="#">커뮤니티</a>
         <ul>
           <li><a href="pages/gallery.html">공지사항</a></li>

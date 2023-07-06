@@ -77,30 +77,8 @@
 	          </td>
 	         </tr>
          </c:if>
-         <tr>
-         	<td>
-         		<a href="#" class="btn btn-xs btn-danger">찜학</a>
-         		<a href="#" class="btn btn-xs btn-danger">좋아오(0)</a>
-         		<a href="#" class="btn btn-xs btn-danger">예약</a>
-         		<a href="../food/food_category_list.do?cno=${vo.cno }" class="btn btn-xs btn-danger">목록으로</a>
-         	</td>
-         </tr>
         </table>
       </div>
-      <%-- 
-      	1차 프로젝트
-      	1) MVC의 이해
-      	2) DataBase 이용
-      	3) JDBC -> DBCP -> ORM(MyBatis)
-      	                   ----- Spring
-      	4) Front -> Ajax -> Vue -> React
-      	---------------------------------
-      	3차 -> MSA(React) -> FullStack
-      	
-      	                     
-      	                    
-      
-       --%>
       <div class="col-sm-4">
         <%--지도 , 인근 명소 --%>
         <div id="map" style="width:100%;height:350px;"></div>

@@ -11,13 +11,14 @@ import com.sist.controller.RequestMapping;
 import com.sist.dao.MemberDAO;
 import com.sist.vo.MemberVO;
 import com.sist.vo.ZipcodeVO;
-
+import com.sist.common.*;
 public class MemberModel {
   
 	@RequestMapping("member/join.do")
 	public String memberJoin(HttpServletRequest request,HttpServletResponse response)
 	{
 		request.setAttribute("main_jsp", "../member/join.jsp");
+		CommonModel.commonRequestData(request);
 		return "../main/main.jsp";
 	}
 	@RequestMapping("member/idcheck.do")
