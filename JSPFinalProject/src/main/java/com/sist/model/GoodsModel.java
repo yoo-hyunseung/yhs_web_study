@@ -5,7 +5,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.sist.common.*;
-import com.sist.controller.RequestMapping;
+import com.sist.controller.*;
 import com.sist.dao.*;
 import com.sist.vo.*;
 
@@ -75,7 +75,6 @@ public class GoodsModel {
 		GoodsVO vo = dao.goodsDetailData(Integer.parseInt(no), Integer.parseInt(type));
 		
 		request.setAttribute("vo", vo);
-		System.out.println(vo.getNo()+" : "+type);
 		request.setAttribute("type", type);
 		
 		// 결과값을 request로 묶어서 -> goods_detail.jsp 전송

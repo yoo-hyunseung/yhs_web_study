@@ -3,6 +3,7 @@ package com.sist.model;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sist.common.CommonModel;
 import com.sist.controller.RequestMapping;
 import com.sist.vo.*;
 import com.sist.dao.SeoulDAO;
@@ -37,6 +38,18 @@ public class SeoulModel {
 		String[] msg= {"","서울 명소","서울 자연","서울 쇼핑"};
 		request.setAttribute("msg", msg[Integer.parseInt(type)]);
 		request.setAttribute("main_jsp", "../seoul/seoul_list.jsp");
+		CommonModel.commonRequestData(request);
+		return "../main/main.jsp";
+	}
+	@RequestMapping("seoul/seoul_detail.do")
+	public String seoul_detail(HttpServletRequest request,HttpServletResponse response) {
+		String no = request.getParameter("no");
+		String type = request.getParameter("type");
+		
+		
+		
+		
+		request.setAttribute("main_jsp", "../seoul/seoul_detail.jsp");
 		
 		return "../main/main.jsp";
 	}

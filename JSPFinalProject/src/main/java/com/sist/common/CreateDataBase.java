@@ -25,4 +25,12 @@ public class CreateDataBase {
 			// TODO: handle exception
 		}
 	}
+	public void disConnection(Connection conn,CallableStatement ps) {
+		try {
+			if(ps!=null)ps.close();
+			if(conn!=null)conn.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
 }

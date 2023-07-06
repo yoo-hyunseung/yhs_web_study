@@ -121,6 +121,11 @@ public class FoodModel {
 	  
 	  request.setAttribute("main_jsp", "../food/food_detail.jsp");
 	  CommonModel.commonRequestData(request);
+	  
+	  // reply
+	  ReplyDAO rdao = ReplyDAO.newInstance();
+	  List<ReplyVO> rlist = rdao.replyListData(1,Integer.parseInt(fno));
+	  request.setAttribute("rlist", rlist);
 	  return "../main/main.jsp";
   }
   

@@ -78,6 +78,49 @@
 	         </tr>
          </c:if>
         </table>
+        <div style="height: 20px"></div>
+        <h3> 댓글 </h3>
+        <hr>
+        <table class="table">
+        	<tr>
+        		<td>
+        			<c:forEach var="rvo" items="${rlist }">
+        				<table class="table"> 
+        					<tr>
+        						<td class="text-left">
+        							${rvo.name }&nbsp;(${rvo.dbday })
+        						</td>
+        						<td class="text-right">
+        							<c:if test="${sessionScope.id==rvo.id }">
+        								<a href="#" class="btn btn-xs btn-danger"></a>
+        								<a href="#" class="btn btn-xs btn-primary"></a>
+        							</c:if>
+        						</td>
+        					</tr>
+        					<tr>
+        						<td colspan="2" valign="top" class="text-left">
+        							<pre style="white-space: pre-wrap; background-color: white;border: none">${rvo.msg }</pre>
+        						</td>
+        					</tr>
+        				</table>
+        			</c:forEach>
+        		</td>
+        	</tr>
+        </table>
+        <c:if test="${sessionScope.id !=null }">
+        <table class="table">
+        	<tr>
+        		<td>
+        		<form action="../reply_insert.do" me>
+					<input type="hidden" name="cno" value="${vo.fno }">
+					<input type="hidden" name="type" value="1">
+        			<textarea rows="5" cols="45" name="msg" style="float: left;"></textarea>
+        			<input type="submit" value="댓글쓰기" style="width: 120px; height: 92px;background-color: green;color: white;">
+        		</form>
+        		</td>
+        	</tr>
+        </table>
+        </c:if>
       </div>
       <div class="col-sm-4">
         <%--지도 , 인근 명소 --%>

@@ -6,4 +6,5 @@
 	<bean id="board" class="com.sist.model.FreeBoardModel"></bean>
 	<bean id="goods" class="com.sist.model.GoodsModel"></bean>
 	<bean id="seoul" class="com.sist.model.SeoulModel"></bean>
+	<bean id="reply" class="com.sist.model.ReplyModel"></bean>
 </beans>

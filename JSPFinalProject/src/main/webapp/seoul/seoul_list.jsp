@@ -29,7 +29,7 @@
           </header>
           <ul class="nospace clear">
            <c:forEach var="vo" items="${list }" varStatus="s">
-              <li class="one_quarter ${s.index%4==0?'first':'' }"><a href="#"><img src="${vo.poster }" title="${vo.title }"></a></li>
+              <li class="one_quarter ${s.index%4==0?'first':'' }"><a href="../seoul/seoul_detail.do?no=${vo.no }&type=${type }"><img src="${vo.poster }" title="${vo.title }"></a></li>
            </c:forEach> 
            
             
@@ -46,7 +46,7 @@
          </c:if>
          
          <c:forEach var="i" begin="${startPage }" end="${endPage }">
-            <li ${curpage==i?"class=current":"" }><a href="../seoul/seoul_list.do?page=${i }&type=${fd}">${i }</a></li>
+            <li ${curpage==i?"class=current":"" }><a href="../seoul/seoul_list.do?page=${i }&type=${type}">${i }</a></li>
          </c:forEach>
          
           
