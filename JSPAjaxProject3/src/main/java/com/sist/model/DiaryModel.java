@@ -71,7 +71,7 @@ public class DiaryModel {
 	    	}
 	    }
 	    request.setAttribute("rday", rday);
-	  return "diary.jsp";
+	  return "../diary3/diary.jsp";
   }
   @RequestMapping("diary3/food_list.do")
   public String food_list(HttpServletRequest request,
